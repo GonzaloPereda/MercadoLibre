@@ -1,0 +1,62 @@
+.item .pic {
+  width: 250px;
+  height: 270px;
+  border-radius: 4px;
+  background-image: none;
+}
+
+.item {
+  /* padding: 32px 16px 32px 16px; */
+
+  padding: 120px;
+  padding-left: 150px;
+  margin-left: 200px;
+  max-width: 800px;
+  height: 150px;
+  margin: 0px 100px;
+
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+/* .item:hover {
+  box-shadow: 0 2px 6px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+  text-decoration: none;
+} */
+
+/* .titulo {
+  font-size: 20px;
+  width: 100%;
+  color: #333333;
+  overflow: hidden;
+  margin-top: -210px;
+  font-weight: 800;
+  padding-left: 272px;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+}
+
+.titulo-precio {
+  font-size: 20px;
+  width: 100%;
+  color: #333333;
+  overflow: hidden;
+  margin-top: -180px;
+  font-weight: 800;
+  padding-left: 700px;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+}
+
+.titulo-id {
+  width: 100%;
+  height: 100%;
+  padding-left: 212px;
+}
+
+.titulo-shipping {
+  width: 100%;
+  height: 100%;
+  padding-left: 212px;
+} */
