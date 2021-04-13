@@ -18,6 +18,7 @@ class PageSearchResult extends Component {
           ],
         },
       ],
+      descripcion: [{}],
     },
   };
   handleChange = (e) => {
@@ -40,6 +41,7 @@ class PageSearchResult extends Component {
   fetchData = async () => {
     let ide = this.props.history.location.search.substr(1);
     let url = "http://localhost:5000/items/" + ide;
+
     this.setState({
       loading: true,
     });
@@ -60,6 +62,7 @@ class PageSearchResult extends Component {
       });
     }
   };
+
   render() {
     return (
       <React.Fragment>

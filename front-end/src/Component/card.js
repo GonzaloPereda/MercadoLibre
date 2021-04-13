@@ -9,7 +9,6 @@ class Card extends React.Component {
       <Link to={"/items/:?" + this.props.ide}>
         <div className="item">
           <img className="pic" src={this.props.img} alt="" />
-
           <p className="titulo">{this.props.titulo}</p>
           <p className="titulo-precio">${this.props.precio}</p>
           {/* <p className="titulo-id">{this.props.ide}</p> */}
