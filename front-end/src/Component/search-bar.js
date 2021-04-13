@@ -7,24 +7,19 @@ class SearchBar extends Component {
   state = {
     busqueda: "",
   };
+
   handleChange = (e) => {
     this.setState({ busqueda: e.target.value }); // dentro de busqueda guardo lo que ingresa el usuario
-    console.log(e.target.name, e.target.value);
   };
-
-  // handleClick = (e) => {
-  //   e.preventDefault();
-  //   console.log(e.target.name, "Ouch me apretaste");
-  // };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.name);
   };
 
   render() {
     return (
       <React.Fragment>
+        {/* Formulario de la barra */}
         <div className="nav-home">
           <img src={logo} alt="" id="logo" />
           <form className="formulario" name="form" onSubmit={this.handleSubmit}>

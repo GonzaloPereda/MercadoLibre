@@ -18,9 +18,9 @@ class PageSearchResult extends Component {
           ],
         },
       ],
-      descripcion: [{}],
     },
   };
+
   handleChange = (e) => {
     console.log(e, "soy el handle de esta page");
     this.setState({
@@ -28,20 +28,13 @@ class PageSearchResult extends Component {
     });
   };
 
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      this.fetchData();
-    }
-  }
-
+  // Utilizo este componente que se ejecuta antes que se renderice
   componentDidMount() {
-    this.fetchData();
+    let ide = this.props.history.location.search.substr(1);
+    this.fetchData("http://localhost:5000/items/" + ide);
   }
 
-  fetchData = async () => {
-    let ide = this.props.history.location.search.substr(1);
-    let url = "http://localhost:5000/items/" + ide;
-
+  fetchData = async (url) => {
     this.setState({
       loading: true,
     });
@@ -73,18 +66,16 @@ class PageSearchResult extends Component {
           {this.state.data.item.map((index, i) => {
             return (
               <Card
+                // Utilizo props que declare en el componente card.js
                 precio={index.price}
                 titulo={index.title}
                 img={index.pictures[0]["url"]}
                 ide={index.id}
-                // shipping={index.free_shipping}
                 sold={index.sold_quantity}
-                free={index.free_shipping}
                 key={i}
               />
             );
           })}
-          {/* <Description /> */}
         </div>
       </React.Fragment>
     );

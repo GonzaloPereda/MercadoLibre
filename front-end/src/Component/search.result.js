@@ -16,22 +16,13 @@ class SearchResult extends Component {
     },
   };
 
-  // item: [
-  //   {
-  //     pictures: [{ url: "" }, { url: "" }, { url: "" }, { url: "" }],
-  //   },
-  // ],
-
+  // Componente que utilizo para
   componentWillReceiveProps(e) {
     let termino = e.busqueda;
     this.fetchData(
       "https://api.mercadolibre.com/sites/MLA/search?q=:" + termino
     );
   }
-
-  // componentDidMount() {
-
-  // }
 
   fetchData = async (url) => {
     this.setState({
@@ -60,27 +51,21 @@ class SearchResult extends Component {
       <React.Fragment>
         {this.state.loading && <Loading />}
         {this.state.error && <Error errorMensaje={this.state.errorMensaje} />}
-        <div>
-          {this.state.data.results.slice(0, 4).map((index, i) => {
-            return (
-              <Card
-                // img={index.pictures[0]["url"]}
-                precio={index.price}
-                titulo={index.title}
-                img={index.thumbnail}
-                ide={index.id}
-                shipping={index.free_shipping}
-                condition={index.condition}
-                key={i}
-              />
-            );
-          })}
-
-          {/* <Card />
-          <Card />
-          <Card />
-          <Card /> */}
-        </div>
+        {/* Evaluo el state y lo mapeo, que trabaja directamente con arreglos */}
+        {this.state.data.results.slice(0, 4).map((index, i) => {
+          return (
+            <Card
+              //Utilizo los props que declare en el componente Card.js
+              precio={index.price}
+              titulo={index.title}
+              img={index.thumbnail}
+              ide={index.id}
+              shipping={index.free_shipping}
+              condition={index.condition}
+              key={i}
+            />
+          );
+        })}
       </React.Fragment>
     );
   }

@@ -33,13 +33,6 @@ class PageHome extends React.Component {
               onChange={this.onChange} // le paso este evento a mi prop de <SearhBar onChange={this.changeHandle} />
             />
             <input type="image" src={boton} />
-
-            {/* <button
-              type="submit"
-              className="boton" //onClick={this.handleClick}
-            >
-             <div role="img"></div>
-            </button> */}
           </form>
         </div>
       </React.Fragment>

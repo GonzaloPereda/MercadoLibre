@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PageSearchResult from "./page-search-result.js";
 import PageHome from "./page-home.js";
-import PageCard from "./page-cards.js";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import PageCards from "./page-cards.js";

@@ -16,8 +16,6 @@ class Card extends React.Component {
           <p className="titulo-sold-quantity">{this.props.sold}</p>
           <p className="titulo-free-shipping">{this.props.free}</p>
           <p className="titulo-condition">{this.props.condition}</p>
-
-          {/* <p className="descripcion">{this.props.descripcion}</p> */}
         </div>
       </Link>
     );
