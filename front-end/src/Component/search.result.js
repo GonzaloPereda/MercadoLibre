@@ -16,7 +16,7 @@ class SearchResult extends Component {
     },
   };
 
-  // Componente que utilizo para
+  // Componente que utilizo porque el componente recibe props
   componentWillReceiveProps(e) {
     let termino = e.busqueda;
     this.fetchData(

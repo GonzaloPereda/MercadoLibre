@@ -28,11 +28,9 @@ body {
 
 .formulario {
   height: 48px;
-
   left: 200px;
   right: 94px;
   z-index: 910;
-  /* will-change: left; */
   position: relative;
   padding: 18px 60px;
 }
